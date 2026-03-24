@@ -1,42 +1,42 @@
 {
     "version": 1,
-    "generated_at": "2026-03-24T03:54:03Z",
+    "generated_at": "2026-03-24T03:55:52Z",
     "plugins": {
         "sample-downloader": {
             "name": "Sample Downloader",
             "type": "download",
-            "author": "psilabs-dev",
+            "author": "koyomi",
             "version": "1.0",
             "description": "Downloads a sample archive from lrr-plugins-demo.",
             "path": "Plugin/Download/SampleDownload.pm",
-            "sha256": "271be402aa472fd5242e535853be2e070f18386bc7ab2c680963a3014121b2c3"
+            "sha256": "3dba33618b42c2708d2c8694f1e0871b67dee55a3abbb5e0ba82a767b46fbf4e"
         },
         "sample-login": {
             "name": "Sample Login",
             "type": "login",
-            "author": "psilabs-dev",
+            "author": "koyomi",
             "version": "1.0",
             "description": "Login example",
             "path": "Plugin/Login/SampleLogin.pm",
-            "sha256": "732939c466ca3a3b6c2a7bbc3dae07aa287f9aec4dd81d820f7de5ae9012edf6"
+            "sha256": "9bd9cec596e8f0cd7b3239f9a76d471bdd4dc6d7e5bfbf503b209eb4759d7ae7"
         },
         "sample-metadata": {
             "name": "Sample Metadata",
             "type": "metadata",
-            "author": "psilabs-dev",
+            "author": "koyomi",
             "version": "1.0",
             "description": "Metadata example",
             "path": "Plugin/Metadata/SampleMetadata.pm",
-            "sha256": "af3f57d0dbaacd51030e2391b72766ec5eccd9b6a5149964a4211794657bc699"
+            "sha256": "302fd443204370a37fd41b36303add8b74aa05b043ff053286a7bc89a4059f42"
         },
         "sample-script": {
             "name": "Sample Script",
             "type": "script",
-            "author": "psilabs-dev",
+            "author": "koyomi",
             "version": "1.0",
             "description": "Script example",
             "path": "Plugin/Scripts/SampleScript.pm",
-            "sha256": "0eeac46a447f8e1c371a2e9982c58cd7c2373d9c0b946561d0e34e0243460f33"
+            "sha256": "dc8c1f5f3e98e680a72ba7e936ce8897566ffcdb660b536f0530ff1cb130085c"
         }
     }
 }

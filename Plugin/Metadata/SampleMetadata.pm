@@ -14,7 +14,7 @@ sub plugin_info {
         name        => "Sample Metadata",
         type        => "metadata",
         namespace   => "sample-metadata",
-        author      => "psilabs-dev",
+        author      => "koyomi",
         version     => "1.0",
         description => "Metadata example",
         parameters  => [],

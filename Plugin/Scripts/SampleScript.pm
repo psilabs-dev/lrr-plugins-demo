@@ -12,7 +12,7 @@ sub plugin_info {
         name        => "Sample Script",
         type        => "script",
         namespace   => "sample-script",
-        author      => "psilabs-dev",
+        author      => "koyomi",
         version     => "1.0",
         description => "Script example",
         oneshot_arg => "Value to echo back"

@@ -14,7 +14,7 @@ sub plugin_info {
         name        => "Sample Login",
         type        => "login",
         namespace   => "sample-login",
-        author      => "psilabs-dev",
+        author      => "koyomi",
         version     => "1.0",
         description => "Login example",
         parameters  => [
