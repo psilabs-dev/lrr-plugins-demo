@@ -11,7 +11,7 @@
         },
         "sample-login": {
             "name": "Sample Login",
-            "type": "string",
+            "type": "login",
             "author": "psilabs-dev",
             "version": "1.0",
             "description": "Login example",
