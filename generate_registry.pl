@@ -1,5 +1,7 @@
 #!/usr/bin/env perl
 # Generates registry.json by scanning Plugin/ for valid LRR plugins.
+# Parses plugin_info() as text — does not load or execute plugin files.
+#
 # Usage: perl generate_registry.pl [plugin_dir]
 #   plugin_dir defaults to "Plugin" relative to this script's directory.
 use strict;
@@ -9,10 +11,6 @@ use Cwd qw(abs_path);
 use Digest::SHA qw(sha256_hex);
 use File::Basename qw(dirname);
 use File::Find;
-use JSON qw(encode_json);
-
-# Configure JSON encoder: sorted keys, 4-space indent
-my $JSON = JSON->new->utf8->canonical->pretty->indent_length(4);
 
 my $script_dir  = dirname(abs_path($0));
 my $plugin_dir  = $ARGV[0] // "$script_dir/Plugin";
@@ -27,11 +25,9 @@ find(
         return unless /\.pm$/;
         my $filepath = $File::Find::name;
 
-        # Derive the relative path from the registry root (e.g. Plugin/Metadata/Foo.pm)
         my $rel_path = $filepath;
         $rel_path =~ s/^\Q$script_dir\E\/?//;
 
-        # Read file content for SHA-256
         open(my $fh, '<:raw', $filepath) or do {
             warn "Cannot read $filepath: $!\n";
             return;
@@ -41,31 +37,30 @@ find(
 
         my $sha256 = sha256_hex($content);
 
-        # Validate package declaration
-        unless ($content =~ /^package\s+(LANraragi::Plugin::\S+);/m) {
-            warn "Skipping $rel_path: no valid package declaration\n";
+        # Extract plugin_info block as text
+        unless ($content =~ /sub\s+plugin_info\s*\{.*?return\s*\((.*?)\)\s*;/s) {
+            warn "Skipping $rel_path: no plugin_info found\n";
             return;
         }
-        my $package = $1;
+        my $info_block = $1;
 
-        # Load the module
-        eval { require $filepath };
-        if ($@) {
-            warn "Skipping $rel_path: failed to load: $@\n";
-            return;
-        }
-
-        # Get plugin metadata
-        my %info = eval { $package->plugin_info() };
-        if ($@ || !%info) {
-            warn "Skipping $rel_path: plugin_info() failed: $@\n";
-            return;
+        # Parse key => "value" pairs
+        my %info;
+        while ($info_block =~ /(\w+)\s*=>\s*"([^"]*)"/g) {
+            $info{$1} = $2;
         }
 
         my $namespace = $info{namespace};
         unless ($namespace) {
             warn "Skipping $rel_path: no namespace defined\n";
             return;
+        }
+
+        for my $required (qw(name type author version description)) {
+            unless (defined $info{$required}) {
+                warn "Skipping $rel_path: missing '$required' in plugin_info\n";
+                return;
+            }
         }
 
         if (exists $plugins{$namespace}) {
@@ -93,11 +88,40 @@ if ($count == 0) {
     die "No valid plugins found in $plugin_dir\n";
 }
 
-my $registry = { plugins => \%plugins };
-my $json     = $JSON->encode($registry);
-
+# Write JSON with sorted keys, 4-space indentation
 open(my $out, '>:utf8', $output_file) or die "Cannot write $output_file: $!\n";
-print $out $json;
+print $out "{\n";
+print $out "    \"plugins\": {\n";
+
+my @namespaces = sort keys %plugins;
+for my $i (0 .. $#namespaces) {
+    my $ns   = $namespaces[$i];
+    my $p    = $plugins{$ns};
+    my $tail = ($i < $#namespaces) ? "," : "";
+
+    print $out "        \"$ns\": {\n";
+
+    my @fields = (
+        [ "name",        $p->{name} ],
+        [ "type",        $p->{type} ],
+        [ "author",      $p->{author} ],
+        [ "version",     $p->{version} ],
+        [ "description", $p->{description} ],
+        [ "path",        $p->{path} ],
+        [ "sha256",      $p->{sha256} ],
+    );
+
+    for my $j (0 .. $#fields) {
+        my ($key, $val) = @{ $fields[$j] };
+        my $comma = ($j < $#fields) ? "," : "";
+        print $out "            \"$key\": \"$val\"$comma\n";
+    }
+
+    print $out "        }$tail\n";
+}
+
+print $out "    }\n";
+print $out "}\n";
 close $out;
 
 print "\nWrote $output_file ($count plugins)\n";

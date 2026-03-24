@@ -1,31 +1,40 @@
 {
-    "plugins" : {
-        "sample-downloader" : {
-            "author" : "psilabs-dev",
-            "description" : "Downloads a sample archive from lrr-plugins-demo.",
-            "name" : "Sample Downloader",
-            "path" : "Plugin/Download/SampleDownload.pm",
-            "sha256" : "271be402aa472fd5242e535853be2e070f18386bc7ab2c680963a3014121b2c3",
-            "type" : "download",
-            "version" : "1.0"
+    "plugins": {
+        "sample-downloader": {
+            "name": "Sample Downloader",
+            "type": "download",
+            "author": "psilabs-dev",
+            "version": "1.0",
+            "description": "Downloads a sample archive from lrr-plugins-demo.",
+            "path": "Plugin/Download/SampleDownload.pm",
+            "sha256": "271be402aa472fd5242e535853be2e070f18386bc7ab2c680963a3014121b2c3"
         },
-        "sample-login" : {
-            "author" : "psilabs-dev",
-            "description" : "Login example",
-            "name" : "Sample Login",
-            "path" : "Plugin/Login/SampleLogin.pm",
-            "sha256" : "732939c466ca3a3b6c2a7bbc3dae07aa287f9aec4dd81d820f7de5ae9012edf6",
-            "type" : "login",
-            "version" : "1.0"
+        "sample-login": {
+            "name": "Sample Login",
+            "type": "string",
+            "author": "psilabs-dev",
+            "version": "1.0",
+            "description": "Login example",
+            "path": "Plugin/Login/SampleLogin.pm",
+            "sha256": "732939c466ca3a3b6c2a7bbc3dae07aa287f9aec4dd81d820f7de5ae9012edf6"
         },
-        "sample-script" : {
-            "author" : "psilabs-dev",
-            "description" : "Script example",
-            "name" : "Sample Script",
-            "path" : "Plugin/Scripts/SampleScript.pm",
-            "sha256" : "0eeac46a447f8e1c371a2e9982c58cd7c2373d9c0b946561d0e34e0243460f33",
-            "type" : "script",
-            "version" : "1.0"
+        "sample-metadata": {
+            "name": "Sample Metadata",
+            "type": "metadata",
+            "author": "psilabs-dev",
+            "version": "1.0",
+            "description": "Metadata example",
+            "path": "Plugin/Metadata/SampleMetadata.pm",
+            "sha256": "af3f57d0dbaacd51030e2391b72766ec5eccd9b6a5149964a4211794657bc699"
+        },
+        "sample-script": {
+            "name": "Sample Script",
+            "type": "script",
+            "author": "psilabs-dev",
+            "version": "1.0",
+            "description": "Script example",
+            "path": "Plugin/Scripts/SampleScript.pm",
+            "sha256": "0eeac46a447f8e1c371a2e9982c58cd7c2373d9c0b946561d0e34e0243460f33"
         }
     }
 }
