@@ -1,0 +1,1 @@
+A test archive containing a single 144x144 white page.

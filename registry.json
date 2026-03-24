@@ -1,0 +1,36 @@
+{
+    "plugins": {
+        "sample-downloader": {
+            "name": "Sample Downloader",
+            "type": "download",
+            "author": "psilabs-dev",
+            "version": "1.0",
+            "description": "Downloader example",
+            "path": "Plugin/Download/SampleDownload.pm"
+        },
+        "sample-login": {
+            "name": "Sample Login",
+            "type": "login",
+            "author": "psilabs-dev",
+            "version": "1.0",
+            "description": "Login example",
+            "path": "Plugin/Login/SampleLogin.pm"
+        },
+        "sample-metadata": {
+            "name": "Sample Metadata",
+            "type": "metadata",
+            "author": "psilabs-dev",
+            "version": "1.0",
+            "description": "Metadata example",
+            "path": "Plugin/Metadata/SampleMetadata.pm"
+        },
+        "sample-script": {
+            "name": "Sample Script",
+            "type": "script",
+            "author": "psilabs-dev",
+            "version": "1.0",
+            "description": "Script example",
+            "path": "Plugin/Scripts/SampleScript.pm"
+        }
+    }
+}
