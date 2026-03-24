@@ -18,6 +18,9 @@ my $output_file = "$script_dir/registry.json";
 
 die "Plugin directory not found: $plugin_dir\n" unless -d $plugin_dir;
 
+# Fields to extract from plugin_info (all are simple string values).
+my @REGISTRY_FIELDS = qw(name type namespace author version description);
+
 my %plugins;
 
 find(
@@ -37,17 +40,25 @@ find(
 
         my $sha256 = sha256_hex($content);
 
-        # Extract plugin_info block as text
-        unless ($content =~ /sub\s+plugin_info\s*\{.*?return\s*\((.*?)\)\s*;/s) {
+        # Extract plugin_info subroutine body (everything between sub plugin_info { ... })
+        unless ($content =~ /sub\s+plugin_info\s*\{(.*?)^\}/ms) {
             warn "Skipping $rel_path: no plugin_info found\n";
             return;
         }
-        my $info_block = $1;
+        my $info_body = $1;
 
-        # Parse key => "value" pairs
+        # Parse each target field individually.
+        # Handles: key => "value", key => 'value', and values split across lines.
         my %info;
-        while ($info_block =~ /(\w+)\s*=>\s*"([^"]*)"/g) {
-            $info{$1} = $2;
+        for my $field (@REGISTRY_FIELDS) {
+            # Match key => "..." (double-quoted, possibly multi-line)
+            if ($info_body =~ /\b$field\s*=>\s*"((?:[^"\\]|\\.)*)"/s) {
+                $info{$field} = $1;
+            }
+            # Match key => '...' (single-quoted, possibly multi-line)
+            elsif ($info_body =~ /\b$field\s*=>\s*'((?:[^'\\]|\\.)*)'/s) {
+                $info{$field} = $1;
+            }
         }
 
         my $namespace = $info{namespace};
@@ -56,7 +67,7 @@ find(
             return;
         }
 
-        for my $required (qw(name type author version description)) {
+        for my $required (@REGISTRY_FIELDS) {
             unless (defined $info{$required}) {
                 warn "Skipping $rel_path: missing '$required' in plugin_info\n";
                 return;
@@ -67,6 +78,9 @@ find(
             warn "Duplicate namespace '$namespace' in $rel_path (already seen in $plugins{$namespace}{path})\n";
             return;
         }
+
+        # Collapse multi-line descriptions to a single line
+        $info{description} =~ s/\s*\n\s*/ /g;
 
         $plugins{$namespace} = {
             name        => $info{name},
@@ -113,6 +127,9 @@ for my $i (0 .. $#namespaces) {
 
     for my $j (0 .. $#fields) {
         my ($key, $val) = @{ $fields[$j] };
+        # Escape double quotes and backslashes for JSON output
+        $val =~ s/\\/\\\\/g;
+        $val =~ s/"/\\"/g;
         my $comma = ($j < $#fields) ? "," : "";
         print $out "            \"$key\": \"$val\"$comma\n";
     }
