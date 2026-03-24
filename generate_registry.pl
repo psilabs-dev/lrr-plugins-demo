@@ -1,9 +1,9 @@
 #!/usr/bin/env perl
-# Generates registry.json by scanning Plugin/ for valid LRR plugins.
+# Generates registry.json by scanning Plugin/Managed/ for valid LRR plugins.
 # Parses plugin_info() as text — does not load or execute plugin files.
 #
 # Usage: perl generate_registry.pl [plugin_dir]
-#   plugin_dir defaults to "Plugin" relative to this script's directory.
+#   plugin_dir defaults to "Plugin/Managed" relative to this script's directory.
 use strict;
 use warnings;
 
@@ -14,7 +14,7 @@ use File::Find;
 use POSIX qw(strftime);
 
 my $script_dir  = dirname(abs_path($0));
-my $plugin_dir  = $ARGV[0] // "$script_dir/Plugin";
+my $plugin_dir  = $ARGV[0] // "$script_dir/Plugin/Managed";
 my $output_file = "$script_dir/registry.json";
 
 die "Plugin directory not found: $plugin_dir\n" unless -d $plugin_dir;

@@ -1,4 +1,4 @@
-package LANraragi::Plugin::Download::SampleDownload;
+package LANraragi::Plugin::Managed::Download::SampleDownload;
 
 use strict;
 use warnings;

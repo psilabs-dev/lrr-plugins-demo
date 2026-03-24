@@ -1,4 +1,4 @@
-package LANraragi::Plugin::Scripts::SampleScript;
+package LANraragi::Plugin::Managed::Scripts::SampleScript;
 
 use strict;
 use warnings;

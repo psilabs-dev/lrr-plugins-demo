@@ -1,4 +1,4 @@
-package LANraragi::Plugin::Login::SampleLogin;
+package LANraragi::Plugin::Managed::Login::SampleLogin;
 
 use strict;
 use warnings;

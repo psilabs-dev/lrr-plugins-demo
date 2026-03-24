@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "generated_at": "2026-03-24T03:55:52Z",
+    "generated_at": "2026-03-24T22:08:32Z",
     "plugins": {
         "sample-downloader": {
             "name": "Sample Downloader",
@@ -8,8 +8,8 @@
             "author": "koyomi",
             "version": "1.0",
             "description": "Downloads a sample archive from lrr-plugins-demo.",
-            "path": "Plugin/Download/SampleDownload.pm",
-            "sha256": "3dba33618b42c2708d2c8694f1e0871b67dee55a3abbb5e0ba82a767b46fbf4e"
+            "path": "Plugin/Managed/Download/SampleDownload.pm",
+            "sha256": "18fa9fd52b04c124813e727a864b406c824231078cf9364d9be64d2e0596a46d"
         },
         "sample-login": {
             "name": "Sample Login",
@@ -17,8 +17,8 @@
             "author": "koyomi",
             "version": "1.0",
             "description": "Login example",
-            "path": "Plugin/Login/SampleLogin.pm",
-            "sha256": "9bd9cec596e8f0cd7b3239f9a76d471bdd4dc6d7e5bfbf503b209eb4759d7ae7"
+            "path": "Plugin/Managed/Login/SampleLogin.pm",
+            "sha256": "f3a346c83dd37ba9bba1296cd104f743f9dbd085193209bfee7e9f5f866280b4"
         },
         "sample-metadata": {
             "name": "Sample Metadata",
@@ -26,8 +26,8 @@
             "author": "koyomi",
             "version": "1.0",
             "description": "Metadata example",
-            "path": "Plugin/Metadata/SampleMetadata.pm",
-            "sha256": "302fd443204370a37fd41b36303add8b74aa05b043ff053286a7bc89a4059f42"
+            "path": "Plugin/Managed/Metadata/SampleMetadata.pm",
+            "sha256": "b175bf1aa9e8a812bdd7620ebb4e200f4aaead9c776503dd51b23cff9046e94f"
         },
         "sample-script": {
             "name": "Sample Script",
@@ -35,8 +35,8 @@
             "author": "koyomi",
             "version": "1.0",
             "description": "Script example",
-            "path": "Plugin/Scripts/SampleScript.pm",
-            "sha256": "dc8c1f5f3e98e680a72ba7e936ce8897566ffcdb660b536f0530ff1cb130085c"
+            "path": "Plugin/Managed/Scripts/SampleScript.pm",
+            "sha256": "244e7ec899a19d3b01d89933cef5cea0e2eaf2f894f242eafe5676c41e4123f3"
         }
     }
 }

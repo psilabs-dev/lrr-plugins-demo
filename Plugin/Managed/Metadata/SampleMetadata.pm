@@ -1,4 +1,4 @@
-package LANraragi::Plugin::Metadata::SampleMetadata;
+package LANraragi::Plugin::Managed::Metadata::SampleMetadata;
 
 use strict;
 use warnings;
