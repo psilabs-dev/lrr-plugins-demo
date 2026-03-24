@@ -14,7 +14,8 @@ sub plugin_info {
         namespace   => "sample-downloader",
         author      => "psilabs-dev",
         version     => "1.0",
-        description => "Downloader example",
+        description => "Downloads a sample archive from lrr-plugins-demo.",
+        url_regex   => "https?:\/\/github\.com\/psilabs-dev\/lrr-plugins-demo.*"
     );
 
 }
@@ -24,11 +25,7 @@ sub provide_url {
     shift;
     my $lrr_info = shift;
 
-    # Get the URL to download
-    my $url = $lrr_info->{url};
-
-    # Wow!
-    return ( download_url => $url . "/download" );
+    return ( download_url => "https://github.com/psilabs-dev/lrr-plugins-demo/raw/refs/heads/main/archive/sample.zip" );
 }
 
 1;
