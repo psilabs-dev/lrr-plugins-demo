@@ -11,6 +11,7 @@ use Cwd qw(abs_path);
 use Digest::SHA qw(sha256_hex);
 use File::Basename qw(dirname);
 use File::Find;
+use POSIX qw(strftime);
 
 my $script_dir  = dirname(abs_path($0));
 my $plugin_dir  = $ARGV[0] // "$script_dir/Plugin";
@@ -103,8 +104,12 @@ if ($count == 0) {
 }
 
 # Write JSON with sorted keys, 4-space indentation
+my $now = strftime("%Y-%m-%dT%H:%M:%SZ", gmtime);
+
 open(my $out, '>:utf8', $output_file) or die "Cannot write $output_file: $!\n";
 print $out "{\n";
+print $out "    \"version\": 1,\n";
+print $out "    \"generated_at\": \"$now\",\n";
 print $out "    \"plugins\": {\n";
 
 my @namespaces = sort keys %plugins;
