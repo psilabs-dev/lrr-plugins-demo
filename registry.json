@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "generated_at": "2026-03-24T22:08:32Z",
+    "generated_at": "2026-04-13T02:56:58Z",
     "plugins": {
         "sample-downloader": {
             "name": "Sample Downloader",
@@ -37,6 +37,33 @@
             "description": "Script example",
             "path": "Plugin/Managed/Scripts/SampleScript.pm",
             "sha256": "244e7ec899a19d3b01d89933cef5cea0e2eaf2f894f242eafe5676c41e4123f3"
+        },
+        "title-suffix-1": {
+            "name": "Title Suffix 1",
+            "type": "metadata",
+            "author": "koyomi",
+            "version": "1.0",
+            "description": "Adds a '-1' suffix to the current title",
+            "path": "Plugin/Managed/Metadata/TitleSuffix1.pm",
+            "sha256": "53943d7658d7213123e0f32bcd030b3cb15fabc0d6f3c57553744c849ced382e"
+        },
+        "title-suffix-2": {
+            "name": "Title Suffix 2",
+            "type": "metadata",
+            "author": "koyomi",
+            "version": "1.0",
+            "description": "Adds a '-2' suffix to the current title",
+            "path": "Plugin/Managed/Metadata/TitleSuffix2.pm",
+            "sha256": "9c060b8e8d04d00c2d8f823b96d2427723917237adab1ed3d7b11ca2b1b4b2f4"
+        },
+        "title-suffix-3": {
+            "name": "Title Suffix 3",
+            "type": "metadata",
+            "author": "koyomi",
+            "version": "1.0",
+            "description": "Adds a '-3' suffix to the current title",
+            "path": "Plugin/Managed/Metadata/TitleSuffix3.pm",
+            "sha256": "3eac53d113db6c247595edfd15f79a09800b51244e1aaa94eed623ec9b0b1601"
         }
     }
 }
