@@ -15,7 +15,7 @@ sub plugin_info {
         type        => "login",
         namespace   => "sample-login",
         author      => "koyomi",
-        version     => "1.0",
+        version     => "1.1",
         description => "Login example",
         parameters  => [
             { type => "string", desc => "Username" },

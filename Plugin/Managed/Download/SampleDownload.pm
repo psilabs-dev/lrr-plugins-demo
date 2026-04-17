@@ -13,7 +13,7 @@ sub plugin_info {
         type        => "download",
         namespace   => "sample-downloader",
         author      => "koyomi",
-        version     => "1.0",
+        version     => "1.1",
         description => "Downloads a sample archive from lrr-plugins-demo.",
         url_regex   => "https?:\/\/github\.com\/psilabs-dev\/lrr-plugins-demo.*"
     );

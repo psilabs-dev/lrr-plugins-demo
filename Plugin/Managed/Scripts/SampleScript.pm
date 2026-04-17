@@ -13,7 +13,7 @@ sub plugin_info {
         type        => "script",
         namespace   => "sample-script",
         author      => "koyomi",
-        version     => "1.0",
+        version     => "1.1",
         description => "Script example",
         oneshot_arg => "Value to echo back"
     );
@@ -27,7 +27,7 @@ sub run_script {
 
     my $arg = $lrr_info->{oneshot_param};
 
-    return ( result => $arg // "no argument provided" );
+    return ( result => "v1.1: " . ( $arg // "no argument provided" ) );
 }
 
 1;

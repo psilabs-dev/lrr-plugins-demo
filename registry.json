@@ -1,69 +1,69 @@
 {
     "version": 1,
-    "generated_at": "2026-04-13T02:56:58Z",
+    "generated_at": "2026-04-17T07:41:54Z",
     "plugins": {
         "sample-downloader": {
             "name": "Sample Downloader",
             "type": "download",
             "author": "koyomi",
-            "version": "1.0",
+            "version": "1.1",
             "description": "Downloads a sample archive from lrr-plugins-demo.",
             "path": "Plugin/Managed/Download/SampleDownload.pm",
-            "sha256": "18fa9fd52b04c124813e727a864b406c824231078cf9364d9be64d2e0596a46d"
+            "sha256": "5a55410168f49fced0dc95ad9afbcb6d3b3049ac9999119422aab165e297b8e8"
         },
         "sample-login": {
             "name": "Sample Login",
             "type": "login",
             "author": "koyomi",
-            "version": "1.0",
+            "version": "1.1",
             "description": "Login example",
             "path": "Plugin/Managed/Login/SampleLogin.pm",
-            "sha256": "f3a346c83dd37ba9bba1296cd104f743f9dbd085193209bfee7e9f5f866280b4"
+            "sha256": "44cf5ccde0bbb872207dd5e0c9c6deaa5ddb02aaf0975a3817eb6a88798fb0f7"
         },
         "sample-metadata": {
             "name": "Sample Metadata",
             "type": "metadata",
             "author": "koyomi",
-            "version": "1.0",
+            "version": "1.1",
             "description": "Metadata example",
             "path": "Plugin/Managed/Metadata/SampleMetadata.pm",
-            "sha256": "b175bf1aa9e8a812bdd7620ebb4e200f4aaead9c776503dd51b23cff9046e94f"
+            "sha256": "db5a6d1a6befe451168f66195e6c7b6ea2fa1c49dc1a6d73008c2ae4cd981cae"
         },
         "sample-script": {
             "name": "Sample Script",
             "type": "script",
             "author": "koyomi",
-            "version": "1.0",
+            "version": "1.1",
             "description": "Script example",
             "path": "Plugin/Managed/Scripts/SampleScript.pm",
-            "sha256": "244e7ec899a19d3b01d89933cef5cea0e2eaf2f894f242eafe5676c41e4123f3"
+            "sha256": "fbcda53c4dc820637f6fd9424578ff902f6f6291429a79fcb2f4292a76290df6"
         },
         "title-suffix-1": {
             "name": "Title Suffix 1",
             "type": "metadata",
             "author": "koyomi",
-            "version": "1.0",
+            "version": "1.1",
             "description": "Adds a '-1' suffix to the current title",
             "path": "Plugin/Managed/Metadata/TitleSuffix1.pm",
-            "sha256": "53943d7658d7213123e0f32bcd030b3cb15fabc0d6f3c57553744c849ced382e"
+            "sha256": "cd62d8f290e9a2719cdbd0ce11a1b830f345570ba81b12b3463b1c29a391bad6"
         },
         "title-suffix-2": {
             "name": "Title Suffix 2",
             "type": "metadata",
             "author": "koyomi",
-            "version": "1.0",
+            "version": "1.1",
             "description": "Adds a '-2' suffix to the current title",
             "path": "Plugin/Managed/Metadata/TitleSuffix2.pm",
-            "sha256": "9c060b8e8d04d00c2d8f823b96d2427723917237adab1ed3d7b11ca2b1b4b2f4"
+            "sha256": "463f37464c6826e109042bb8bb9e1aeb985489cd034a73d96b0b70089a5f1dda"
         },
         "title-suffix-3": {
             "name": "Title Suffix 3",
             "type": "metadata",
             "author": "koyomi",
-            "version": "1.0",
+            "version": "1.1",
             "description": "Adds a '-3' suffix to the current title",
             "path": "Plugin/Managed/Metadata/TitleSuffix3.pm",
-            "sha256": "3eac53d113db6c247595edfd15f79a09800b51244e1aaa94eed623ec9b0b1601"
+            "sha256": "f2f957c1cce233f273172570e4dffcef1a2fc9b69c82f1522766f45b877a0afb"
         }
     }
 }
