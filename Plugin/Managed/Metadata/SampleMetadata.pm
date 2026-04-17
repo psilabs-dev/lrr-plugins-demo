@@ -15,7 +15,7 @@ sub plugin_info {
         type        => "metadata",
         namespace   => "sample-metadata",
         author      => "koyomi",
-        version     => "1.0",
+        version     => "1.1",
         description => "Metadata example",
         parameters  => [],
         oneshot_arg => "Optional tag to add"
@@ -29,11 +29,11 @@ sub get_tags {
     shift;
     my $lrr_info = shift;
 
-    my $newtags = "";
+    my $newtags = "upgraded:true";
     my $oneshot = $lrr_info->{oneshot_param};
 
     if ($oneshot) {
-        $newtags = $oneshot;
+        $newtags .= ",$oneshot";
     }
 
     return ( tags => $newtags );

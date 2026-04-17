@@ -15,7 +15,7 @@ sub plugin_info {
         type        => "metadata",
         namespace   => "title-suffix-1",
         author      => "koyomi",
-        version     => "1.0",
+        version     => "1.1",
         description => "Adds a '-1' suffix to the current title",
         parameters  => [],
         oneshot_arg => "Optional tag to add"
