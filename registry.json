@@ -1,9 +1,9 @@
 {
-   "generated_at" : "2026-04-23T22:32:34Z",
+   "generated_at" : "2026-04-25T04:38:26Z",
    "plugins" : {
       "sample-downloader" : {
          "channels" : {
-            "latest" : "1.0"
+            "latest" : "1.1"
          },
          "namespace" : "sample-downloader",
          "type" : "download",
@@ -16,12 +16,21 @@
                "published_at" : "2026-04-23T00:00:00Z",
                "sha256" : "18fa9fd52b04c124813e727a864b406c824231078cf9364d9be64d2e0596a46d",
                "version" : "1.0"
+            },
+            "1.1" : {
+               "artifact" : "artifacts/sample-downloader/1.1/SampleDownload.pm",
+               "author" : "koyomi",
+               "description" : "Downloads a sample archive from lrr-plugins-demo.",
+               "name" : "Sample Downloader",
+               "published_at" : "2026-04-25T04:38:26Z",
+               "sha256" : "5a55410168f49fced0dc95ad9afbcb6d3b3049ac9999119422aab165e297b8e8",
+               "version" : "1.1"
             }
          }
       },
       "sample-login" : {
          "channels" : {
-            "latest" : "1.0"
+            "latest" : "1.1"
          },
          "namespace" : "sample-login",
          "type" : "login",
@@ -34,12 +43,21 @@
                "published_at" : "2026-04-23T00:00:00Z",
                "sha256" : "f3a346c83dd37ba9bba1296cd104f743f9dbd085193209bfee7e9f5f866280b4",
                "version" : "1.0"
+            },
+            "1.1" : {
+               "artifact" : "artifacts/sample-login/1.1/SampleLogin.pm",
+               "author" : "koyomi",
+               "description" : "Login example",
+               "name" : "Sample Login",
+               "published_at" : "2026-04-25T04:38:26Z",
+               "sha256" : "44cf5ccde0bbb872207dd5e0c9c6deaa5ddb02aaf0975a3817eb6a88798fb0f7",
+               "version" : "1.1"
             }
          }
       },
       "sample-metadata" : {
          "channels" : {
-            "latest" : "1.0"
+            "latest" : "1.1"
          },
          "namespace" : "sample-metadata",
          "type" : "metadata",
@@ -52,12 +70,21 @@
                "published_at" : "2026-04-23T00:00:00Z",
                "sha256" : "b175bf1aa9e8a812bdd7620ebb4e200f4aaead9c776503dd51b23cff9046e94f",
                "version" : "1.0"
+            },
+            "1.1" : {
+               "artifact" : "artifacts/sample-metadata/1.1/SampleMetadata.pm",
+               "author" : "koyomi",
+               "description" : "Metadata example",
+               "name" : "Sample Metadata",
+               "published_at" : "2026-04-25T04:38:26Z",
+               "sha256" : "db5a6d1a6befe451168f66195e6c7b6ea2fa1c49dc1a6d73008c2ae4cd981cae",
+               "version" : "1.1"
             }
          }
       },
       "sample-script" : {
          "channels" : {
-            "latest" : "1.0"
+            "latest" : "1.1"
          },
          "namespace" : "sample-script",
          "type" : "script",
@@ -70,12 +97,21 @@
                "published_at" : "2026-04-23T00:00:00Z",
                "sha256" : "244e7ec899a19d3b01d89933cef5cea0e2eaf2f894f242eafe5676c41e4123f3",
                "version" : "1.0"
+            },
+            "1.1" : {
+               "artifact" : "artifacts/sample-script/1.1/SampleScript.pm",
+               "author" : "koyomi",
+               "description" : "Script example",
+               "name" : "Sample Script",
+               "published_at" : "2026-04-25T04:38:26Z",
+               "sha256" : "fbcda53c4dc820637f6fd9424578ff902f6f6291429a79fcb2f4292a76290df6",
+               "version" : "1.1"
             }
          }
       },
       "title-suffix-1" : {
          "channels" : {
-            "latest" : "1.0"
+            "latest" : "1.1"
          },
          "namespace" : "title-suffix-1",
          "type" : "metadata",
@@ -88,12 +124,21 @@
                "published_at" : "2026-04-23T00:00:00Z",
                "sha256" : "53943d7658d7213123e0f32bcd030b3cb15fabc0d6f3c57553744c849ced382e",
                "version" : "1.0"
+            },
+            "1.1" : {
+               "artifact" : "artifacts/title-suffix-1/1.1/TitleSuffix1.pm",
+               "author" : "koyomi",
+               "description" : "Adds a '-1' suffix to the current title",
+               "name" : "Title Suffix 1",
+               "published_at" : "2026-04-25T04:38:26Z",
+               "sha256" : "cd62d8f290e9a2719cdbd0ce11a1b830f345570ba81b12b3463b1c29a391bad6",
+               "version" : "1.1"
             }
          }
       },
       "title-suffix-2" : {
          "channels" : {
-            "latest" : "1.0"
+            "latest" : "1.1"
          },
          "namespace" : "title-suffix-2",
          "type" : "metadata",
@@ -106,12 +151,21 @@
                "published_at" : "2026-04-23T00:00:00Z",
                "sha256" : "9c060b8e8d04d00c2d8f823b96d2427723917237adab1ed3d7b11ca2b1b4b2f4",
                "version" : "1.0"
+            },
+            "1.1" : {
+               "artifact" : "artifacts/title-suffix-2/1.1/TitleSuffix2.pm",
+               "author" : "koyomi",
+               "description" : "Adds a '-2' suffix to the current title",
+               "name" : "Title Suffix 2",
+               "published_at" : "2026-04-25T04:38:26Z",
+               "sha256" : "463f37464c6826e109042bb8bb9e1aeb985489cd034a73d96b0b70089a5f1dda",
+               "version" : "1.1"
             }
          }
       },
       "title-suffix-3" : {
          "channels" : {
-            "latest" : "1.0"
+            "latest" : "1.1"
          },
          "namespace" : "title-suffix-3",
          "type" : "metadata",
@@ -124,6 +178,15 @@
                "published_at" : "2026-04-23T00:00:00Z",
                "sha256" : "3eac53d113db6c247595edfd15f79a09800b51244e1aaa94eed623ec9b0b1601",
                "version" : "1.0"
+            },
+            "1.1" : {
+               "artifact" : "artifacts/title-suffix-3/1.1/TitleSuffix3.pm",
+               "author" : "koyomi",
+               "description" : "Adds a '-3' suffix to the current title",
+               "name" : "Title Suffix 3",
+               "published_at" : "2026-04-25T04:38:26Z",
+               "sha256" : "f2f957c1cce233f273172570e4dffcef1a2fc9b69c82f1522766f45b877a0afb",
+               "version" : "1.1"
             }
          }
       }
