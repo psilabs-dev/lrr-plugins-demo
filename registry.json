@@ -1,5 +1,5 @@
 {
-   "generated_at" : "2026-05-10T00:06:49Z",
+   "generated_at" : "2026-05-10T00:10:50Z",
    "plugins" : {
       "sample-downloader" : {
          "namespace" : "sample-downloader",
@@ -13,6 +13,15 @@
                "published_at" : "2026-05-05T21:31:12Z",
                "sha256" : "b706314ae4800568968e82d248789dc33a705f620283d26c7d13e7ad866aee93",
                "version" : "1.0.0"
+            },
+            "1.1.0" : {
+               "artifact" : "artifacts/sample-downloader/1.1.0/SampleDownload.pm",
+               "author" : "koyomi",
+               "description" : "Downloads a sample archive from lrr-plugins-demo.",
+               "name" : "Sample Downloader",
+               "published_at" : "2026-05-05T21:49:16Z",
+               "sha256" : "d6b817eadfd172ba57db5dce720c58103c279dcef9bf5c016165d4237f4930bc",
+               "version" : "1.1.0"
             }
          }
       },
@@ -28,6 +37,15 @@
                "published_at" : "2026-05-05T21:31:12Z",
                "sha256" : "4d7a63ffa90913bc2cb9a926aaf7f723de289c1594152267b4fb57fbdb868679",
                "version" : "1.0.0"
+            },
+            "1.1.0" : {
+               "artifact" : "artifacts/sample-login/1.1.0/SampleLogin.pm",
+               "author" : "koyomi",
+               "description" : "Login example",
+               "name" : "Sample Login",
+               "published_at" : "2026-05-05T21:49:16Z",
+               "sha256" : "c4d74e1af88fa30bab8fa18b0d9d3189bde59b04d8c284ba47dd0940117b61e6",
+               "version" : "1.1.0"
             }
          }
       },
@@ -43,6 +61,15 @@
                "published_at" : "2026-05-05T21:31:12Z",
                "sha256" : "efb2bc3ec7e61535cfd4332564f985f1c0d3a890c2885472224fa609cd33665a",
                "version" : "1.0.0"
+            },
+            "1.1.0" : {
+               "artifact" : "artifacts/sample-metadata/1.1.0/SampleMetadata.pm",
+               "author" : "koyomi",
+               "description" : "Metadata example",
+               "name" : "Sample Metadata",
+               "published_at" : "2026-05-05T21:49:16Z",
+               "sha256" : "5cd3fad12022b86157958ce5c365e647885779dae269957a07ee1ac7982258d7",
+               "version" : "1.1.0"
             }
          }
       },
@@ -58,6 +85,15 @@
                "published_at" : "2026-05-05T21:31:12Z",
                "sha256" : "6019dde675e46adde213198a6cd4131f64f40bcf62acaee21e35779620a7297b",
                "version" : "1.0.0"
+            },
+            "1.1.0" : {
+               "artifact" : "artifacts/sample-script/1.1.0/SampleScript.pm",
+               "author" : "koyomi",
+               "description" : "Script example",
+               "name" : "Sample Script",
+               "published_at" : "2026-05-05T21:49:16Z",
+               "sha256" : "53f32f11d3bcdbd2cda959fbf4d57eaef87ee44c521a734bea9d65570eebfc2c",
+               "version" : "1.1.0"
             }
          }
       },
@@ -73,6 +109,15 @@
                "published_at" : "2026-05-05T21:31:12Z",
                "sha256" : "f78bcec603d4109423442502f6560898e463e70bc568c64377a53aa6af8c76bf",
                "version" : "1.0.0"
+            },
+            "1.1.0" : {
+               "artifact" : "artifacts/title-suffix-1/1.1.0/TitleSuffix1.pm",
+               "author" : "koyomi",
+               "description" : "Adds a '-1' suffix to the current title",
+               "name" : "Title Suffix 1",
+               "published_at" : "2026-05-05T21:49:16Z",
+               "sha256" : "80c15da173b68fd577b33aa8325a634fe4d7053089f469a75e33a9f97e566ea9",
+               "version" : "1.1.0"
             }
          }
       },
@@ -88,6 +133,15 @@
                "published_at" : "2026-05-05T21:31:12Z",
                "sha256" : "aa2b9946fb874aa06e3f7491b58a8f6973ed0c5c17e970174a6eff989d41fa4a",
                "version" : "1.0.0"
+            },
+            "1.1.0" : {
+               "artifact" : "artifacts/title-suffix-2/1.1.0/TitleSuffix2.pm",
+               "author" : "koyomi",
+               "description" : "Adds a '-2' suffix to the current title",
+               "name" : "Title Suffix 2",
+               "published_at" : "2026-05-05T21:49:16Z",
+               "sha256" : "fbe04ca68a95c27f6ab6ec8bac030f734aeef5094f3f70d79472bcb9286bffa0",
+               "version" : "1.1.0"
             }
          }
       },
@@ -103,6 +157,15 @@
                "published_at" : "2026-05-05T21:31:12Z",
                "sha256" : "a22c4a144f892dab6fd9e0874b34084b24897a002a0eb7158604fb778a75a884",
                "version" : "1.0.0"
+            },
+            "1.1.0" : {
+               "artifact" : "artifacts/title-suffix-3/1.1.0/TitleSuffix3.pm",
+               "author" : "koyomi",
+               "description" : "Adds a '-3' suffix to the current title",
+               "name" : "Title Suffix 3",
+               "published_at" : "2026-05-05T21:49:16Z",
+               "sha256" : "e1ce71da6e587523bf6f1503b00a96278d8e8bc46fbcb47525619eeb0e98444b",
+               "version" : "1.1.0"
             }
          }
       }
