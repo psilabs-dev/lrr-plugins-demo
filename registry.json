@@ -1,69 +1,132 @@
 {
-    "version": 1,
-    "generated_at": "2026-04-13T02:56:58Z",
-    "plugins": {
-        "sample-downloader": {
-            "name": "Sample Downloader",
-            "type": "download",
-            "author": "koyomi",
-            "version": "1.0",
-            "description": "Downloads a sample archive from lrr-plugins-demo.",
-            "path": "Plugin/Managed/Download/SampleDownload.pm",
-            "sha256": "18fa9fd52b04c124813e727a864b406c824231078cf9364d9be64d2e0596a46d"
-        },
-        "sample-login": {
-            "name": "Sample Login",
-            "type": "login",
-            "author": "koyomi",
-            "version": "1.0",
-            "description": "Login example",
-            "path": "Plugin/Managed/Login/SampleLogin.pm",
-            "sha256": "f3a346c83dd37ba9bba1296cd104f743f9dbd085193209bfee7e9f5f866280b4"
-        },
-        "sample-metadata": {
-            "name": "Sample Metadata",
-            "type": "metadata",
-            "author": "koyomi",
-            "version": "1.0",
-            "description": "Metadata example",
-            "path": "Plugin/Managed/Metadata/SampleMetadata.pm",
-            "sha256": "b175bf1aa9e8a812bdd7620ebb4e200f4aaead9c776503dd51b23cff9046e94f"
-        },
-        "sample-script": {
-            "name": "Sample Script",
-            "type": "script",
-            "author": "koyomi",
-            "version": "1.0",
-            "description": "Script example",
-            "path": "Plugin/Managed/Scripts/SampleScript.pm",
-            "sha256": "244e7ec899a19d3b01d89933cef5cea0e2eaf2f894f242eafe5676c41e4123f3"
-        },
-        "title-suffix-1": {
-            "name": "Title Suffix 1",
-            "type": "metadata",
-            "author": "koyomi",
-            "version": "1.0",
-            "description": "Adds a '-1' suffix to the current title",
-            "path": "Plugin/Managed/Metadata/TitleSuffix1.pm",
-            "sha256": "53943d7658d7213123e0f32bcd030b3cb15fabc0d6f3c57553744c849ced382e"
-        },
-        "title-suffix-2": {
-            "name": "Title Suffix 2",
-            "type": "metadata",
-            "author": "koyomi",
-            "version": "1.0",
-            "description": "Adds a '-2' suffix to the current title",
-            "path": "Plugin/Managed/Metadata/TitleSuffix2.pm",
-            "sha256": "9c060b8e8d04d00c2d8f823b96d2427723917237adab1ed3d7b11ca2b1b4b2f4"
-        },
-        "title-suffix-3": {
-            "name": "Title Suffix 3",
-            "type": "metadata",
-            "author": "koyomi",
-            "version": "1.0",
-            "description": "Adds a '-3' suffix to the current title",
-            "path": "Plugin/Managed/Metadata/TitleSuffix3.pm",
-            "sha256": "3eac53d113db6c247595edfd15f79a09800b51244e1aaa94eed623ec9b0b1601"
-        }
-    }
+   "generated_at" : "2026-04-23T22:32:34Z",
+   "plugins" : {
+      "sample-downloader" : {
+         "channels" : {
+            "latest" : "1.0"
+         },
+         "namespace" : "sample-downloader",
+         "type" : "download",
+         "versions" : {
+            "1.0" : {
+               "artifact" : "artifacts/sample-downloader/1.0/SampleDownload.pm",
+               "author" : "koyomi",
+               "description" : "Downloads a sample archive from lrr-plugins-demo.",
+               "name" : "Sample Downloader",
+               "published_at" : "2026-04-23T00:00:00Z",
+               "sha256" : "18fa9fd52b04c124813e727a864b406c824231078cf9364d9be64d2e0596a46d",
+               "version" : "1.0"
+            }
+         }
+      },
+      "sample-login" : {
+         "channels" : {
+            "latest" : "1.0"
+         },
+         "namespace" : "sample-login",
+         "type" : "login",
+         "versions" : {
+            "1.0" : {
+               "artifact" : "artifacts/sample-login/1.0/SampleLogin.pm",
+               "author" : "koyomi",
+               "description" : "Login example",
+               "name" : "Sample Login",
+               "published_at" : "2026-04-23T00:00:00Z",
+               "sha256" : "f3a346c83dd37ba9bba1296cd104f743f9dbd085193209bfee7e9f5f866280b4",
+               "version" : "1.0"
+            }
+         }
+      },
+      "sample-metadata" : {
+         "channels" : {
+            "latest" : "1.0"
+         },
+         "namespace" : "sample-metadata",
+         "type" : "metadata",
+         "versions" : {
+            "1.0" : {
+               "artifact" : "artifacts/sample-metadata/1.0/SampleMetadata.pm",
+               "author" : "koyomi",
+               "description" : "Metadata example",
+               "name" : "Sample Metadata",
+               "published_at" : "2026-04-23T00:00:00Z",
+               "sha256" : "b175bf1aa9e8a812bdd7620ebb4e200f4aaead9c776503dd51b23cff9046e94f",
+               "version" : "1.0"
+            }
+         }
+      },
+      "sample-script" : {
+         "channels" : {
+            "latest" : "1.0"
+         },
+         "namespace" : "sample-script",
+         "type" : "script",
+         "versions" : {
+            "1.0" : {
+               "artifact" : "artifacts/sample-script/1.0/SampleScript.pm",
+               "author" : "koyomi",
+               "description" : "Script example",
+               "name" : "Sample Script",
+               "published_at" : "2026-04-23T00:00:00Z",
+               "sha256" : "244e7ec899a19d3b01d89933cef5cea0e2eaf2f894f242eafe5676c41e4123f3",
+               "version" : "1.0"
+            }
+         }
+      },
+      "title-suffix-1" : {
+         "channels" : {
+            "latest" : "1.0"
+         },
+         "namespace" : "title-suffix-1",
+         "type" : "metadata",
+         "versions" : {
+            "1.0" : {
+               "artifact" : "artifacts/title-suffix-1/1.0/TitleSuffix1.pm",
+               "author" : "koyomi",
+               "description" : "Adds a '-1' suffix to the current title",
+               "name" : "Title Suffix 1",
+               "published_at" : "2026-04-23T00:00:00Z",
+               "sha256" : "53943d7658d7213123e0f32bcd030b3cb15fabc0d6f3c57553744c849ced382e",
+               "version" : "1.0"
+            }
+         }
+      },
+      "title-suffix-2" : {
+         "channels" : {
+            "latest" : "1.0"
+         },
+         "namespace" : "title-suffix-2",
+         "type" : "metadata",
+         "versions" : {
+            "1.0" : {
+               "artifact" : "artifacts/title-suffix-2/1.0/TitleSuffix2.pm",
+               "author" : "koyomi",
+               "description" : "Adds a '-2' suffix to the current title",
+               "name" : "Title Suffix 2",
+               "published_at" : "2026-04-23T00:00:00Z",
+               "sha256" : "9c060b8e8d04d00c2d8f823b96d2427723917237adab1ed3d7b11ca2b1b4b2f4",
+               "version" : "1.0"
+            }
+         }
+      },
+      "title-suffix-3" : {
+         "channels" : {
+            "latest" : "1.0"
+         },
+         "namespace" : "title-suffix-3",
+         "type" : "metadata",
+         "versions" : {
+            "1.0" : {
+               "artifact" : "artifacts/title-suffix-3/1.0/TitleSuffix3.pm",
+               "author" : "koyomi",
+               "description" : "Adds a '-3' suffix to the current title",
+               "name" : "Title Suffix 3",
+               "published_at" : "2026-04-23T00:00:00Z",
+               "sha256" : "3eac53d113db6c247595edfd15f79a09800b51244e1aaa94eed623ec9b0b1601",
+               "version" : "1.0"
+            }
+         }
+      }
+   },
+   "version" : 1
 }
