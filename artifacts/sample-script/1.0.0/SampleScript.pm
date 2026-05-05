@@ -13,7 +13,7 @@ sub plugin_info {
         type        => "script",
         namespace   => "sample-script",
         author      => "koyomi",
-        version     => "1.0",
+        version     => "1.0.0",
         description => "Script example",
         oneshot_arg => "Value to echo back"
     );

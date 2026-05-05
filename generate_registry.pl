@@ -37,7 +37,6 @@ for my $namespace (list_child_directories($artifact_root)) {
     $plugins{$namespace} = {
         namespace => $existing_plugin->{namespace},
         type      => $existing_plugin->{type},
-        channels  => $existing_plugin->{channels},
         versions  => {},
     };
 
@@ -91,8 +90,6 @@ for my $namespace ( sort keys %{$existing_plugins} ) {
         unless exists $plugins{$namespace};
 }
 
-validate_channels( \%plugins );
-
 write_manifest(
     $output_file,
     {
@@ -132,8 +129,6 @@ sub load_existing_plugins {
             unless defined $plugin->{type};
         die "Plugin '$namespace' has invalid type '$plugin->{type}'\n"
             unless $VALID_TYPES{ $plugin->{type} };
-        die "Plugin '$namespace' channels must be an object\n"
-            unless ref $plugin->{channels} eq 'HASH';
         die "Plugin '$namespace' versions must be an object\n"
             unless ref $plugin->{versions} eq 'HASH';
         die "Plugin '$namespace' versions must be non-empty\n"
@@ -142,7 +137,6 @@ sub load_existing_plugins {
         $plugins{$namespace} = {
             namespace => $plugin->{namespace},
             type      => $plugin->{type},
-            channels  => $plugin->{channels},
             versions  => {},
         };
 
@@ -166,23 +160,6 @@ sub load_existing_plugins {
     }
 
     return \%plugins;
-}
-
-sub validate_channels {
-    my ($plugins) = @_;
-
-    for my $namespace ( sort keys %{$plugins} ) {
-        my $channels = $plugins->{$namespace}{channels};
-
-        die "Plugin '$namespace' must contain only 'latest' in channels\n"
-            unless keys(%{$channels}) == 1 && exists $channels->{latest};
-
-        my $target_version = $channels->{latest};
-        die "Channel target for '$namespace' must be a string\n"
-            unless defined $target_version && !ref $target_version && length $target_version;
-        die "Channel 'latest' for '$namespace' points to unknown version '$target_version'\n"
-            unless exists $plugins->{$namespace}{versions}{$target_version};
-    }
 }
 
 sub parse_plugin_artifact_content {

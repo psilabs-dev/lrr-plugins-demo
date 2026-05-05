@@ -1,4 +1,4 @@
-package LANraragi::Plugin::Managed::Metadata::TitleSuffix2;
+package LANraragi::Plugin::Managed::Metadata::TitleSuffix3;
 
 use strict;
 use warnings;
@@ -11,12 +11,12 @@ sub plugin_info {
 
     return (
         # Standard metadata
-        name        => "Title Suffix 2",
+        name        => "Title Suffix 3",
         type        => "metadata",
-        namespace   => "title-suffix-2",
+        namespace   => "title-suffix-3",
         author      => "koyomi",
-        version     => "1.0",
-        description => "Adds a '-2' suffix to the current title",
+        version     => "1.0.0",
+        description => "Adds a '-3' suffix to the current title",
         parameters  => [],
         oneshot_arg => "Optional tag to add"
     );
@@ -31,7 +31,7 @@ sub get_tags {
 
     my $title = $lrr_info->{archive_title} // "";
 
-    return ( tags => "", title => "$title-2" );
+    return ( tags => "", title => "$title-3" );
 }
 
 1;
