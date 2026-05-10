@@ -17,7 +17,7 @@ sub plugin_info {
         author      => "koyomi",
         version     => "1.0.0",
         description => "Adds a '-1' suffix to the current title",
-        parameters  => [],
+        parameters  => {},
         oneshot_arg => "Optional tag to add"
     );
 

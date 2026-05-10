@@ -1,5 +1,5 @@
 {
-   "generated_at" : "2026-05-05T21:31:20Z",
+   "generated_at" : "2026-05-10T00:06:49Z",
    "plugins" : {
       "sample-downloader" : {
          "namespace" : "sample-downloader",
@@ -26,7 +26,7 @@
                "description" : "Login example",
                "name" : "Sample Login",
                "published_at" : "2026-05-05T21:31:12Z",
-               "sha256" : "2e1778179530311672d5a57d463c115758c1b7bd5e46102b124e415b1086dea2",
+               "sha256" : "4d7a63ffa90913bc2cb9a926aaf7f723de289c1594152267b4fb57fbdb868679",
                "version" : "1.0.0"
             }
          }
@@ -41,7 +41,7 @@
                "description" : "Metadata example",
                "name" : "Sample Metadata",
                "published_at" : "2026-05-05T21:31:12Z",
-               "sha256" : "a9a587dcacfcf8c3ecfc9c9e0e1dbda6d9175f8bb009e59a8837b74de577e009",
+               "sha256" : "efb2bc3ec7e61535cfd4332564f985f1c0d3a890c2885472224fa609cd33665a",
                "version" : "1.0.0"
             }
          }
@@ -71,7 +71,7 @@
                "description" : "Adds a '-1' suffix to the current title",
                "name" : "Title Suffix 1",
                "published_at" : "2026-05-05T21:31:12Z",
-               "sha256" : "f329d19aa33bec8d2d3f5d675e6a23a5b5257cfa0f3ebe72d58c6a6cf6c8fc44",
+               "sha256" : "f78bcec603d4109423442502f6560898e463e70bc568c64377a53aa6af8c76bf",
                "version" : "1.0.0"
             }
          }
@@ -86,7 +86,7 @@
                "description" : "Adds a '-2' suffix to the current title",
                "name" : "Title Suffix 2",
                "published_at" : "2026-05-05T21:31:12Z",
-               "sha256" : "87cffb65cdf141d363b1705a4da8c455fe7f62640299e2db4ee98bcdfb73d4d1",
+               "sha256" : "aa2b9946fb874aa06e3f7491b58a8f6973ed0c5c17e970174a6eff989d41fa4a",
                "version" : "1.0.0"
             }
          }
@@ -101,7 +101,7 @@
                "description" : "Adds a '-3' suffix to the current title",
                "name" : "Title Suffix 3",
                "published_at" : "2026-05-05T21:31:12Z",
-               "sha256" : "d64f80ba910756b697aa5b8e28a8214ff5b4bc35af507bdb0df7cde5bd8088f9",
+               "sha256" : "a22c4a144f892dab6fd9e0874b34084b24897a002a0eb7158604fb778a75a884",
                "version" : "1.0.0"
             }
          }

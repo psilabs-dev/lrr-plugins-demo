@@ -17,7 +17,7 @@ sub plugin_info {
         author      => "koyomi",
         version     => "1.0.0",
         description => "Metadata example",
-        parameters  => [],
+        parameters  => {},
         oneshot_arg => "Optional tag to add"
     );
 

@@ -17,10 +17,10 @@ sub plugin_info {
         author      => "koyomi",
         version     => "1.0.0",
         description => "Login example",
-        parameters  => [
-            { type => "string", desc => "Username" },
-            { type => "string", desc => "Password" }
-        ]
+        parameters  => {
+            username => { type => "string", desc => "Username" },
+            password => { type => "string", desc => "Password" },
+        }
     );
 
 }
@@ -30,7 +30,9 @@ sub plugin_info {
 sub do_login {
 
     shift;
-    my ( $username, $password ) = @_;
+    my ($args) = @_;
+    my $username = $args->{username};
+    my $password = $args->{password};
 
     my $ua = Mojo::UserAgent->new;
     return $ua;

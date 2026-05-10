@@ -21,6 +21,11 @@ die "Manifest not found: $output_file\n"             unless -f $output_file;
 
 my @PLUGIN_INFO_FIELDS = qw(name type namespace author version description);
 my %VALID_TYPES        = map { $_ => 1 } qw(metadata download login script);
+my %RESERVED_PARAM_KEY = map { $_ => 1 } qw(
+    installed_path installed_version installed_registry installed_sha256 type
+    enabled hidden priority
+    customargs
+);
 
 my $existing_manifest = decode_json_file($output_file);
 my $existing_plugins  = load_existing_plugins($existing_manifest);
@@ -54,6 +59,7 @@ for my $namespace (list_child_directories($artifact_root)) {
         my $artifact_content = read_file_raw($canonical_path);
         my $artifact_sha256  = sha256_hex($artifact_content);
         my $info             = parse_plugin_artifact_content( $canonical_path, $artifact_content );
+        validate_plugin_parameters( $canonical_path, $artifact_content );
 
         die "Namespace directory mismatch for $rel_path\n"
             unless $info->{namespace} eq $namespace;
@@ -180,6 +186,56 @@ sub parse_plugin_artifact_content {
 
     $info{description} =~ s/\s*\n\s*/ /g;
     return \%info;
+}
+
+sub validate_plugin_parameters {
+    my ( $path, $content ) = @_;
+
+    my ($info_body) = $content =~ /sub\s+plugin_info\s*\{(.*?)^\}/ms;
+    return unless defined $info_body;
+
+    if ( $info_body =~ /\bparameters\s*=>\s*\[/ ) {
+        die "Array-style 'parameters' is not supported; use hash-style: $path\n";
+    }
+
+    if ( $info_body =~ /\bparameters\s*=>\s*(\{(?:(?>[^{}]+)|(?1))*\})/x ) {
+        my $body = $1;
+        $body =~ s/\A\{//;
+        $body =~ s/\}\z//;
+
+        # Strip string contents to avoid false 'key =>' matches inside literals.
+        $body =~ s/"((?:[^"\\]|\\.)*)"/""/gs;
+        $body =~ s/'((?:[^'\\]|\\.)*)'/''/gs;
+
+        for my $key ( top_level_param_keys($body) ) {
+            die "Parameter key '$key' is reserved by LANraragi internal state: $path\n"
+                if $RESERVED_PARAM_KEY{$key};
+        }
+    }
+}
+
+sub top_level_param_keys {
+    my ($body) = @_;
+    my @keys;
+    my $depth = 0;
+    my $i     = 0;
+    my $len   = length $body;
+    while ( $i < $len ) {
+        my $c = substr( $body, $i, 1 );
+        if ( $c eq '{' ) { $depth++; $i++; }
+        elsif ( $c eq '}' ) { $depth--; $i++; }
+        elsif ( $depth == 0 && $c =~ /[A-Za-z_]/ ) {
+            if ( substr( $body, $i ) =~ /^([A-Za-z_][A-Za-z0-9_-]*)\s*=>/ ) {
+                push @keys, $1;
+                $i += length $1;
+            } else {
+                $i++;
+            }
+        } else {
+            $i++;
+        }
+    }
+    return @keys;
 }
 
 sub validate_artifact_path {
